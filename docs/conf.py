@@ -27,6 +27,7 @@ extensions = [
     'sphinxcontrib.httpdomain',
     'djangodocs',
     'doc_extensions',
+    'sphinx.ext.viewcode'
 ]
 templates_path = ['_templates']
 

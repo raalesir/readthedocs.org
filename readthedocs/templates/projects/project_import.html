@@ -125,7 +125,7 @@
                         class="remote-repo-extra remote-repo-extra-url">
                     </span>
                     <span
-                        data-bind="visible: is_locked()"
+                        data-bind="visible: is_locked(), text: clone_url"
                         class="remote-repo-extra remote-repo-extra-locked">
                       {% trans "This repository requires admin access to import" %}
                     </span>
@@ -149,7 +149,7 @@
                         <span>{% blocktrans context "verb, action to see in detail" %}"View"{% endblocktrans %}</span>
                       </a>
                     </li>
-                    <li data-bind="visible: !match() && !is_locked()" style="display: none;">
+                    <li data-bind="visible: !match()" style="display: none;">
                       <a
                           href="#"
                           data-bind="click: import_repo"
